@@ -1,4 +1,0 @@
-org/dominokit/website/layout/server/resources/LayoutResource.class
-org/dominokit/website/layout/server/package-info.class
-org/dominokit/website/layout/server/LayoutServerModule.class
-META-INF/services/org.dominokit.domino.api.server.config.ServerModuleConfiguration
