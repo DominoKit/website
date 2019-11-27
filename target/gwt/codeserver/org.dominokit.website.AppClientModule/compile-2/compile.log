@@ -1,0 +1,17 @@
+binding: user.agent=safari
+Compiling module org.dominokit.website.AppClientModule
+   Unification traversed 32051 fields and methods and 2638 types. 2617 are considered part of the current module and 2617 had all of their fields and methods traversed.
+   Warnings in com/google/gwt/emul/java/util/Arrays.java
+      [WARN] Line 1782: [unusable-by-js] Type of parameter 'd1' in 'int Arrays.1methodref$compare$Type.compare(long, long)' is not usable by but exposed to JavaScript.
+      [WARN] Line 1782: [unusable-by-js] Type of parameter 'd2' in 'int Arrays.1methodref$compare$Type.compare(long, long)' is not usable by but exposed to JavaScript.
+   [WARN] Suppress "[unusable-by-js]" warnings by adding a `@SuppressWarnings("unusable-by-js")` annotation to the corresponding member.
+   Compiling 1 permutation
+      Compiling permutation 0...
+      Linking per-type JS with 2596 new/changed types.
+      Source Maps Enabled
+   Compile of permutations succeeded
+   Compilation succeeded -- 6.925s
+Linking into /home/rjeeb/Development/git/dominokit/website/target/gwt/codeserver/org.dominokit.website.AppClientModule/compile-2/war/app; Writing extras to /home/rjeeb/Development/git/dominokit/website/target/gwt/codeserver/org.dominokit.website.AppClientModule/compile-2/extras/app
+   Link succeeded
+   Linking succeeded -- 0.279s
+7.331s total -- Compile completed

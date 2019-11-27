@@ -1,0 +1,10 @@
+{
+"version":3,
+"file":"sourceMap1",
+"lineCount":7,
+"mappings":"A,OAKA,wC,CCwJA,OCnIA,CDmIA,KAAA,uCElIA,uBACA,EAAA,CChBA,EDgBA,CACA,CEnBA,EFmBA,gCAFA,C;AARA,2B;AGiBA,iBACA,SADA,C;ACbA,OLGA,CKHA,KAEA,eACA,GChBA,ODgBA,MChBA,CDgBA,CADA,EEhBA,OPiBA,COjBA,ECYA,GDZA,KAOA,eACA,UADA,ETXA,OWiBA,GXjBA,KAKA,gBACA,SADA,E,IALA,qC,CYeA,eACA,GXwCA,IAnCA,KAmCA,EAAA,IY1DA,GZ0DA,CWxCA,WADA,C;AALA,oBAFA,KAGA,QADA,C;AALA,OZLA,GYKA,QAoBA,mCE5BA,EF4BA,EAJA,GAIA,CAJA,UAIA,E,IApBA,kC,CA4BA,eACA,QADA,C;AAJA,OVRA,CUQA,QASA,+B,IATA;",
+"sources":["org/dominokit/domino/gwt/client/events/ClientRequestGwtEvent.java","org/dominokit/domino/api/client/ClientApp.java","com/google/gwt/emul/java/lang/Object.java","org/dominokit/domino/api/client/events/ActivationEventWait.java","org/dominokit/domino/api/shared/extension/ActivationEvent.java","org/dominokit/domino/api/shared/extension/ActivationEventContext.java","org/dominokit/domino/rest/shared/request/BaseRequest.java","org/dominokit/domino/client/commons/request/ClientRouter.java","org/dominokit/domino/gwt/client/events/ClientEventFactory.java","org/dominokit/domino/gwt/client/async/GwtAsyncRunner.java","com/google/gwt/core/client/RunAsyncCallback.java","org/gwtproject/event/shared/Event.java","org/dominokit/domino/gwt/client/events/ClientRequestEvent.java","org/dominokit/domino/rest/shared/EventsBus.java","org/dominokit/domino/rest/shared/EventProcessor.java"],
+"names":[],
+"x_gwt_permutation":0,
+"x_gwt_fragment":1
+}

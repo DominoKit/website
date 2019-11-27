@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/layout/layout.iml" filepath="$PROJECT_DIR$/layout/layout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/layout/layout-backend/layout-backend.iml" filepath="$PROJECT_DIR$/layout/layout-backend/layout-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/layout/layout-frontend/layout-frontend.iml" filepath="$PROJECT_DIR$/layout/layout-frontend/layout-frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/layout/layout-frontend-ui/layout-frontend-ui.iml" filepath="$PROJECT_DIR$/layout/layout-frontend-ui/layout-frontend-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/layout/layout-shared/layout-shared.iml" filepath="$PROJECT_DIR$/layout/layout-shared/layout-shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/website.iml" filepath="$PROJECT_DIR$/.idea/website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/website-backend/website-backend.iml" filepath="$PROJECT_DIR$/website-backend/website-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/website-frontend/website-frontend.iml" filepath="$PROJECT_DIR$/website-frontend/website-frontend.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="website-frontend" />
+        <module name="layout-shared" />
+        <module name="layout-backend" />
+        <module name="website-backend" />
+        <module name="layout-frontend" />
+        <module name="layout-frontend-ui" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="layout" target="1.8" />
+      <module name="layout-backend" target="1.8" />
+      <module name="layout-frontend" target="1.8" />
+      <module name="layout-frontend-ui" target="1.8" />
+      <module name="layout-shared" target="1.8" />
+      <module name="website" target="1.8" />
+      <module name="website-backend" target="1.8" />
+      <module name="website-frontend" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="layout-frontend" options="-Xlint:all" />
+      <module name="layout-frontend-ui" options="-Xlint:all" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+binding: user.agent=safari
+Compiling module org.dominokit.website.AppClientModule
+   Unification traversed 4816 fields and methods and 895 types. 4 are considered part of the current module and 399 had all of their fields and methods traversed.
+   [WARN] Some stale types ([org.dominokit.website.layout.client.views.ui.components.FunFeatureComponent]) were not reprocessed as was expected. This is either a compiler bug or a Generator has legitimately stopped creating these types.
+   Compiling 1 permutation
+      Compiling permutation 0...
+      Linking per-type JS with 4 new/changed types.
+      Source Maps Enabled
+   Compile of permutations succeeded
+   Compilation succeeded -- 0.773s
+Linking into /home/rjeeb/Development/git/dominokit/website/target/gwt/codeserver/org.dominokit.website.AppClientModule/compile-92/war/app; Writing extras to /home/rjeeb/Development/git/dominokit/website/target/gwt/codeserver/org.dominokit.website.AppClientModule/compile-92/extras/app
+   Link succeeded
+   Linking succeeded -- 0.112s
+1.001s total -- Compile completed

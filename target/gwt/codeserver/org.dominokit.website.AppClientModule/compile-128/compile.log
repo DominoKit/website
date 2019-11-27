@@ -1,0 +1,13 @@
+binding: user.agent=safari
+Compiling module org.dominokit.website.AppClientModule
+   Unification traversed 5226 fields and methods and 986 types. 8 are considered part of the current module and 438 had all of their fields and methods traversed.
+   Compiling 1 permutation
+      Compiling permutation 0...
+      Linking per-type JS with 8 new/changed types.
+      Source Maps Enabled
+   Compile of permutations succeeded
+   Compilation succeeded -- 0.801s
+Linking into /home/rjeeb/Development/git/dominokit/website/target/gwt/codeserver/org.dominokit.website.AppClientModule/compile-128/war/app; Writing extras to /home/rjeeb/Development/git/dominokit/website/target/gwt/codeserver/org.dominokit.website.AppClientModule/compile-128/extras/app
+   Link succeeded
+   Linking succeeded -- 0.106s
+1.021s total -- Compile completed

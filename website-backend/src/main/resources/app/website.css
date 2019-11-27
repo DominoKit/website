@@ -1,0 +1,186 @@
+/** Add css rules here for your application. */
+
+body {
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    background-color: white;
+}
+
+.content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.content-panel {
+    padding: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .app-footer {
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .app-footer {
+        padding: 20px 200px;
+    }
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+}
+
+.search-box {
+    width: 300px;
+    margin-bottom: 0 !important;
+}
+
+.search-box .field-cntr {
+    background-color: transparent !important;
+    border-radius: 15px !important;
+    height: 30px !important;
+}
+
+.search-box.focused:not([class*="readonly"]) .field-cntr {
+    border: 1px solid white !important;
+}
+
+.search-box .material-icons {
+    font-size: 20px;
+}
+
+.search-box input {
+    color: white !important;
+    height: 17px;
+}
+
+.search-box input::placeholder {
+    color: white;
+}
+
+.clickable-header-item {
+    color: white;
+    cursor: pointer;
+}
+
+.home-container {
+    min-height: calc(100vh - 366px);
+}
+
+.main-caption-container {
+    min-height: 300px;
+}
+
+.home-main-caption {
+    font-weight: 300;
+    text-align: center;
+    font-size: 50px;
+}
+
+@media screen and (max-width: 992px) {
+    .main-caption-container {
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .main-caption-container {
+        padding: 40px 400px;
+    }
+}
+
+.features-container {
+}
+
+.sponsors-container {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.sponsors-container .sponsors-title {
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.sponsor-item img {
+    width: 200px;
+    margin: 20px auto;
+}
+
+.code-block {
+    padding: 30px !important;
+    overflow: auto;
+}
+
+.feature {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+.feature-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+    border-left: 5px solid #607d8b;
+    padding-left: 20px;
+}
+
+.type-safety-code {
+    margin: 0;
+}
+
+.feature-text {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.fast-feature-point {
+    font-size: 18px;
+}
+
+.modular-feature-image {
+    width: 300px;
+    height: 300px;
+}
+
+.others-say-container {
+    padding: 40px;
+}
+
+.others-say-container .others-say-title {
+    font-weight: 300;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.img-responsive.person-pic {
+    width: 35%;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.img-responsive.person-pic.quote-pic {
+    width: 64px;
+    height: 64px;
+}
+
+
+.support-container {
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.support-container .support-title {
+    font-weight: 300;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.support-container .support-text {
+    text-align: center;
+    font-size: 18px;
+}
