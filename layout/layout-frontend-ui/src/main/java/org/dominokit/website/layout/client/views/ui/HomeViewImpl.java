@@ -18,10 +18,7 @@ import org.dominokit.domino.ui.utils.DominoElement;
 import org.dominokit.domino.view.BaseElementView;
 import org.dominokit.website.layout.client.presenters.HomeProxy;
 import org.dominokit.website.layout.client.views.HomeView;
-import org.dominokit.website.layout.client.views.ui.components.FastFeatureComponent;
-import org.dominokit.website.layout.client.views.ui.components.GithubButton;
-import org.dominokit.website.layout.client.views.ui.components.ModularFeatureComponent;
-import org.dominokit.website.layout.client.views.ui.components.TypeSafetyComponent;
+import org.dominokit.website.layout.client.views.ui.components.*;
 import org.gwtproject.timer.client.Timer;
 import org.jboss.gwt.elemento.core.builder.HtmlContentBuilder;
 
@@ -31,7 +28,6 @@ import static org.jboss.gwt.elemento.core.Elements.*;
 public class HomeViewImpl extends BaseElementView<HTMLDivElement> implements HomeView {
 
     private DominoElement<HTMLDivElement> element = DominoElement.div().addCss("home-container");
-    private DominoElement<HTMLDivElement> mainCaptionContainer = DominoElement.div().addCss("main-caption-container");
     private DominoElement<HTMLDivElement> featuresContainer = DominoElement.div().addCss("features-container");
     private DominoElement<HTMLDivElement> sponsorsContainer = DominoElement.div().addCss("sponsors-container");
     private DominoElement<HTMLDivElement> othersSayContainer = DominoElement.div().addCss("others-say-container");
@@ -44,21 +40,10 @@ public class HomeViewImpl extends BaseElementView<HTMLDivElement> implements Hom
         // main part
         initOthersSaySection();
         element
-                .appendChild(mainCaptionContainer
-                        .appendChild(FlexLayout.create()
-                                .setJustifyContent(FlexJustifyContent.CENTER)
-                                .setWrap(FlexWrap.WRAP_TOP_TO_BOTTOM)
-                                .setDirection(FlexDirection.TOP_TO_BOTTOM)
-                                .appendChild(FlexItem.create()
-                                        .setAlignSelf(FlexAlign.CENTER)
-                                        .appendChild(h(1)
-                                                .css("home-main-caption")
-                                                .textContent("A toolkit for building maintainable applications in the browser."))
-                                )
-                                .appendChild(FlexItem.create()
-                                        .setAlignSelf(FlexAlign.CENTER)
-                                        .appendChild(GithubButton.createBlack())
-                                )
+                .appendChild(MainCaption.create("A toolkit for building maintainable applications in the browser.")
+                        .appendChild(FlexItem.create()
+                                .setAlignSelf(FlexAlign.CENTER)
+                                .appendChild(GithubButton.createBlack())
                         )
                 )
                 .appendChild(featuresContainer
@@ -89,7 +74,7 @@ public class HomeViewImpl extends BaseElementView<HTMLDivElement> implements Hom
                                 .setDirection(FlexDirection.TOP_TO_BOTTOM)
                                 .appendChild(FlexItem.create()
                                         .appendChild(h(3)
-                                                .css("sponsors-title").textContent("Sponsors and supporters"))
+                                                .css("section-title").textContent("Sponsors and supporters"))
                                 )
                                 .appendChild(FlexItem.create()
                                         .appendChild(Row.create()
@@ -106,12 +91,12 @@ public class HomeViewImpl extends BaseElementView<HTMLDivElement> implements Hom
                 .appendChild(othersSayContainer
                         .addCss(Color.GREY_LIGHTEN_3.getBackground())
                         .appendChild(h(3)
-                                .css("others-say-title").textContent("What others say"))
+                                .css("section-title").textContent("What others say"))
                         .appendChild(spinSelect)
                 )
                 .appendChild(supportContainer
                         .appendChild(h(3)
-                                .css("support-title").textContent("Official Support?"))
+                                .css("section-title").textContent("Official Support?"))
                         .appendChild(Paragraph.create("Need help troubleshooting or improving your code? " +
                                 "Need custom components or new features? " +
                                 "Work directly with the engineers behind Dominokit.")
@@ -129,10 +114,6 @@ public class HomeViewImpl extends BaseElementView<HTMLDivElement> implements Hom
                                 )
                         )
                 );
-
-        // add sponsors
-        // what others say
-        // powered by
     }
 
     private void initOthersSaySection() {
@@ -170,6 +151,15 @@ public class HomeViewImpl extends BaseElementView<HTMLDivElement> implements Hom
                         .appendChild(h(3).textContent("Saif Badran"))
                         .appendChild(Paragraph.create("Domino-ui made it so simple. It's a real pleasure working on it, the way it generates professional, user-friendly interfaces is impressive!."))
                         .appendChild(Paragraph.create("- Software Engineer @ Progressoft")
+                                .styler(style -> style.add(Styles.font_12)
+                                        .add(ColorScheme.GREY.darker_3().getStyle()))
+                                .italic())))
+                .appendChild(SpinItem.create("", DominoElement.of(div().css(Styles.align_center))
+                        .appendChild(img("./images/hadil-kayyali.jpeg")
+                                .css(Styles.img_responsive, "person-pic", "quote-pic", Elevation.LEVEL_1.getStyle()))
+                        .appendChild(h(3).textContent("Hadil Khalaf Kayyali"))
+                        .appendChild(Paragraph.create("As a business non technical person ,implementing the UI requirements on Domino was a successful user friendly implementation that is not customary in other software languages. Implementation was quick and changes were instantaneous."))
+                        .appendChild(Paragraph.create("- Senior  Banking Consultant")
                                 .styler(style -> style.add(Styles.font_12)
                                         .add(ColorScheme.GREY.darker_3().getStyle()))
                                 .italic())));

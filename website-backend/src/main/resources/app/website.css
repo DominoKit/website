@@ -32,6 +32,10 @@ body {
     height: 45px;
 }
 
+.header-actions {
+    height: 55px;
+}
+
 .search-box {
     width: 300px;
     margin-bottom: 0 !important;
@@ -60,9 +64,22 @@ body {
     color: white;
 }
 
+.header-action-container {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 .clickable-header-item {
     color: white;
     cursor: pointer;
+    margin-bottom: 3px;
+    font-size: 15px;
+    text-decoration: none !important;
+    padding-bottom: 5px;
+}
+
+.clickable-header-item:HOVER {
+    border-bottom: 2px solid white;
 }
 
 .home-container {
@@ -73,7 +90,7 @@ body {
     min-height: 300px;
 }
 
-.home-main-caption {
+.main-caption {
     font-weight: 300;
     text-align: center;
     font-size: 50px;
@@ -91,6 +108,12 @@ body {
     }
 }
 
+.section-title {
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 .features-container {
 }
 
@@ -98,11 +121,6 @@ body {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 50px;
-}
-
-.sponsors-container .sponsors-title {
-    font-weight: 300;
-    margin-bottom: 30px;
 }
 
 .sponsor-item img {
@@ -150,12 +168,6 @@ body {
     padding: 40px;
 }
 
-.others-say-container .others-say-title {
-    font-weight: 300;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
 .img-responsive.person-pic {
     width: 35%;
     border-radius: 50%;
@@ -174,13 +186,15 @@ body {
     margin-bottom: 30px;
 }
 
-.support-container .support-title {
-    font-weight: 300;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
 .support-container .support-text {
     text-align: center;
     font-size: 18px;
+}
+
+.get-help-container {
+    padding: 40px;
+}
+
+.team-container {
+    padding: 40px;
 }

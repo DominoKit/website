@@ -1,9 +1,9 @@
 package org.dominokit.website.layout.client.views.ui;
 
 import elemental2.dom.HTMLDivElement;
+import elemental2.dom.HTMLElement;
 import org.dominokit.domino.api.client.annotations.UiView;
 import org.dominokit.domino.api.client.mvp.slots.IsSlot;
-import org.dominokit.domino.ui.Typography.Paragraph;
 import org.dominokit.domino.ui.forms.FieldStyle;
 import org.dominokit.domino.ui.forms.TextBox;
 import org.dominokit.domino.ui.grid.Column;
@@ -34,6 +34,7 @@ public class LayoutViewImpl extends BaseElementView<HTMLDivElement> implements L
 
     private Layout layout;
     private DominoElement<HTMLDivElement> header;
+    private LayoutUiHandlers uiHandlers;
 
     @Override
     public void init(HTMLDivElement root) {
@@ -45,7 +46,7 @@ public class LayoutViewImpl extends BaseElementView<HTMLDivElement> implements L
 
     private void initHeader() {
         layout.setLogo(img("/static/logo.png").css("logo-img"));
-
+        layout.getNavigationBar().getTitle().addClickListener(evt -> uiHandlers.onHomeSelected());
         header = DominoElement.div();
         TextBox searchBox = TextBox.create()
                 .setFieldStyle(FieldStyle.ROUNDED)
@@ -53,16 +54,20 @@ public class LayoutViewImpl extends BaseElementView<HTMLDivElement> implements L
                 .addCss("search-box");
 
         header.appendChild(FlexLayout.create()
-                .styler(style -> style.setHeight("55px"))
+                .addCss("header-actions")
                 .setDirection(FlexDirection.RIGHT_TO_LEFT)
                 .appendChild(createHeaderItem()
-                        .appendChild(clickableItem("Team"))
+                        .appendChild(searchBox)
+                )
+                .appendChild(createHeaderItem()
+                        .appendChild(clickableItem("Community")
+                                .addClickListener(evt -> uiHandlers.onCommunitySelected()))
+                )
+                .appendChild(createHeaderItem()
+                        .appendChild(clickableItem("Examples"))
                 )
                 .appendChild(createHeaderItem()
                         .appendChild(clickableItem("Documentation"))
-                )
-                .appendChild(createHeaderItem()
-                        .appendChild(searchBox)
                 )
         );
 
@@ -134,16 +139,15 @@ public class LayoutViewImpl extends BaseElementView<HTMLDivElement> implements L
                 );
     }
 
-    private Paragraph clickableItem(String team) {
-        return Paragraph.create(team)
-                .addCss("clickable-header-item");
+    private DominoElement<? extends HTMLElement> clickableItem(String value) {
+        return DominoElement.of(a().textContent(value)
+                .css("clickable-header-item"));
     }
 
     private FlexItem createHeaderItem() {
         return FlexItem.create()
-                .setAlignSelf(FlexAlign.CENTER)
-                .styler(style -> style.setMarginRight("10px")
-                        .setMarginLeft("10px"));
+                .addCss("header-action-container")
+                .setAlignSelf(FlexAlign.CENTER);
     }
 
     @Override
@@ -155,5 +159,10 @@ public class LayoutViewImpl extends BaseElementView<HTMLDivElement> implements L
     @Override
     public IsSlot<?> getContentSlot() {
         return SingleElementSlot.of(layout.getContentPanel());
+    }
+
+    @Override
+    public void setUiHandlers(LayoutUiHandlers uiHandlers) {
+        this.uiHandlers = uiHandlers;
     }
 }

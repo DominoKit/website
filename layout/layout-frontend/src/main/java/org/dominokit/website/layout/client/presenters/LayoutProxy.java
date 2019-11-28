@@ -17,12 +17,22 @@ import static org.dominokit.domino.api.client.mvp.presenter.ViewBaseClientPresen
 @DependsOn(@EventsGroup(MainDominoEvent.class))
 @RegisterSlots(LayoutSlots.CONTENT)
 @OnStateChanged(LayoutReadyEvent.class)
-public class LayoutProxy extends ViewBaseClientPresenter<LayoutView> {
+public class LayoutProxy extends ViewBaseClientPresenter<LayoutView> implements LayoutView.LayoutUiHandlers {
 
     @OnReveal
     public void navigateToHome() {
         if (history().currentToken().isEmpty()) {
-            history().fireState("home");
+            onHomeSelected();
         }
+    }
+
+    @Override
+    public void onCommunitySelected() {
+        history().fireState("community");
+    }
+
+    @Override
+    public void onHomeSelected() {
+        history().fireState("home");
     }
 }
